@@ -46,8 +46,7 @@ def get_domain_iface_ip(dom):
     ifaces = dom.interfaceAddresses(libvirt.VIR_DOMAIN_INTERFACE_ADDRESSES_SRC_LEASE)
     for (name, val) in ifaces.iteritems():
         if val['addrs']:
-            for ipaddr in val['addrs']:
-                return f'Domain interface: {name}\nDomain IP: {ipaddr["addr"]}/{ipaddr["prefix"]}'
+            return f'Domain interface: {name}\nDomain IP: {val["addrs"]["addr"]}/{val["addrs"]["prefix"]}'
         else:
             return f'Domain interface: {name}\nDomain IP not found'
 
