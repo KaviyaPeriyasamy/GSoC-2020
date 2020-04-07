@@ -8,11 +8,12 @@ Google Summer of Code 2020 Coding exercise
 
 - [X] Implement daemon listening for libvirt events and displaying those informations for every newly created VM.
 
-  Feel free to ask any questions.
 
 ## Execution
 
   For example, if the uri and domain name like qemu:///system, CentOS7.Then run the following command to print the domain details.
    
    ```make exercise uri=qemu:///system dom_name=CentOS7```
+   
+
   
